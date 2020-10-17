@@ -30,3 +30,20 @@ INNER JOIN companies ON employees.Company = companies.Name AND companies.Date<20
 3- SELECT employees.Company
 FROM employees
 WHERE employees.Role = "Graphic Designer"
+
+
+Count and Filter
+1- SELECT Name
+FROM students
+WHERE Points = (SELECT max(Points) FROM students)
+2- SELECT avg(Points)
+FROM students
+3- SELECT Count (Points)
+FROM students
+WHERE Points = 500
+4- SELECT name
+FROM students
+WHERE name like '%s%'
+5- SELECT name
+FROM students
+ORDER By Points DESC
