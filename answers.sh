@@ -19,3 +19,14 @@ Graduation TEXT,
 2. INSERT INTO graduates (name, Age, Gender, Points)
 SELECT name, Age, Gender, Points FROM students WHERE students.Name = "Layal"
 3. DELETE FROM students WHERE students.Name = "Layal"
+
+Joins
+1- SELECT employees.Name, employees.Company, companies.Date
+FROM employees
+INNER JOIN companies ON employees.Company = companies.Name
+2- SELECT employees.Name
+FROM employees
+INNER JOIN companies ON employees.Company = companies.Name AND companies.Date<2000
+3- SELECT employees.Company
+FROM employees
+WHERE employees.Role = "Graphic Designer"
